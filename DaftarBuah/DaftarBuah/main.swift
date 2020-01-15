@@ -72,7 +72,7 @@ func showMenu(){
     print("[3] Ubah item buah")
     print("[4] Hapus item buah")
     print("[5] Keluar")
-    if let position = getInputInt(message: "Silahkan pilih menu di atas"), position<=5 && position>0{
+    if let position = getInputInt(message: "Silakan pilih menu di atas"), position<=5 && position>0{
         print("----------------------------------")
         switch position {
         case 1:
