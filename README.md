@@ -1,6 +1,6 @@
 # Memulai Pemrograman Dengan Swift
 ## Kuasailah Swift, bahasa pemrograman modern yang dikembangkan Apple Inc. Materi kelas ini disusun oleh tim expert Dicoding bersama praktisi industri.
-
+![MPDS](https://dicodingacademy.blob.core.windows.net/academies/201912311651267572f07472ee19d7091c879c4a69f6f3.png)
 Sejak dikenalkan di Apple Wordwide Developer Conference (WWDC) di tahun 2014, Swift telah menjadi bahasa resmi yang didukung oleh Apple Inc. untuk pengembangan aplikasi iOS, iPadOs, macOS, watchOS, tvOS, Linux, dan OS X. Swift merupakan bahasa pemrograman yang modern, cepat dan type-safe. Di tahun 2018, Swift telah mengalahkan Objective-C sebagai bahasa pemrograman yang digunakan untuk iOS dan platform Apple lainnya. Menurut survei yang dilakukan [Stack Overflow](https://insights.stackoverflow.com/survey/2019#most-loved-dreaded-and-wanted), Swift menjadi bahasa pemrograman yang paling disukai tahun 2019. Dibandingkan dengan [2018](https://insights.stackoverflow.com/survey/2018#most-loved-dreaded-and-wanted), pecinta Swift naik dari 65% menjadi 69%.
 
 Kelas ini membahas tuntas dasar Swift sebagai fondasi untuk Anda yang ingin mengembangkan kemampuan pengembangan aplikasi iOS beserta plaftorm Apple lainnya. Kurikulum telah disusun dan diverifikasi oleh tim expert Dicoding bersama praktisi industri agar materi yang disajikan terstruktur dan komprehensif.
