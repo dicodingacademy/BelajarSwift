@@ -80,7 +80,7 @@ func action(){
             showSpeed()
             action()
         case 2:
-            if speedTotal >= 0 {
+            if speedTotal > 0 {
                 speedTotal = decrementByTen()
                 showSpeed()
                 action()
