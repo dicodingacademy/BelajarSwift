@@ -11,44 +11,51 @@ import Foundation
 var listFruits = [String]()
 var isRunning = true
 
-func getInput(message: String) -> String?{
+
+func getInput(message: String) -> String? {
     print(message, terminator: ": ");
     return readLine()
 }
 
-func getInputInt(message: String) -> Int?{
-    if let inputString = getInput(message: message){
+func getInputInt(message: String) -> Int? {
+    if let inputString = getInput(message: message) {
         return Int(inputString)
-    } else{
+    } else {
         return nil
     }
 }
 
-func showAllFruits(){
+func showAllFruits() {
     if listFruits.isEmpty {
         print("Belum ada item di dalam daftar")
-    }else{
+    } else {
         for (index, value) in listFruits.enumerated() {
             print("[\(index + 1)] \(value)")
         }
     }
 }
 
-func insertFruit(){
+func insertFruit() {
     if let name = getInput(message: "Masukkan nama buah") {
         listFruits.append(name)
-    }else{
+    } else {
         insertFruit()
         print("Input tidak valid")
     }
 }
 
-func editFruit(){
+func editFruit() {
     showAllFruits()
     print("----------------------------------")
-    if let position = getInputInt(message: "Pilih posisi buah yang akan diganti"), position<=listFruits.count && position>0, let name = getInput(message: "Masukkan nama buah") {
-        listFruits[position-1] = name
-    }else{
+    if let position = getInputInt(message: "Pilih posisi buah yang akan diganti") {
+        if position <= listFruits.count && position > 0 {
+            if let name = getInput(message: "Masukkan nama buah") {
+                listFruits[position-1] = name
+            }
+        } else {
+            showMenu()
+        }
+    } else {
         editFruit()
         print("Input tidak valid")
     }
@@ -56,15 +63,19 @@ func editFruit(){
 
 func deleteFruit() {
     showAllFruits()
-    if let position = getInputInt(message: "Pilih posisi buah yang akan dihapus"), position<=listFruits.count && position>0{
-        listFruits.remove(at: position-1)
-    }else{
+    if let position = getInputInt(message: "Pilih posisi buah yang akan dihapus") {
+        if position <= listFruits.count && position > 0 {
+            listFruits.remove(at: position-1)
+        } else {
+            showMenu()
+        }
+    } else {
         deleteFruit()
         print("Input tidak valid")
     }
 }
 
-func showMenu(){
+func showMenu() {
     print("Selamat Datang di Dicoding Market")
     print("---------------MENU---------------")
     print("[1] Tampilkan semua buah")
@@ -97,7 +108,6 @@ func showMenu(){
     } else {
         print("Item menu tidak valid")
     }
-    
     print("----------------------------------")
 }
 
