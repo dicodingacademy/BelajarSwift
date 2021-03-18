@@ -18,7 +18,7 @@ print("Masukkan jumlah item yang ingin Anda masukkan", terminator: ": "); let ne
 
 print("----------------------------------")
 
-if let totalItem : Int = Int(newItem){
+if let totalItem : Int = Int(newItem) {
     var recipe = [String]()
     for index in 1...totalItem {
         print("Masukkanlah item ke \(index)", terminator: ": "); let newItem = String(readLine() ?? "")

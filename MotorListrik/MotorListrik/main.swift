@@ -9,13 +9,13 @@
 import Foundation
 
 // Function untuk mendapatkan item dari user
-func getInput(message: String) -> String?{
-    print(message, terminator: " : ");
+func getInput(message: String) -> String? {
+    print(message, terminator: " : ")
     return readLine()
 }
 
-func getInputInt(message: String) -> Int?{
-    if let inputString = getInput(message: message){
+func getInputInt(message: String) -> Int? {
+    if let inputString = getInput(message: message) {
         return Int(inputString)
     } else{
         return nil
@@ -55,25 +55,25 @@ func turnOnEngine() {
 }
 
 // mematikan mesin motor listrik
-func turnOffEngine(){
+func turnOffEngine() {
     print("Ciiiiiiiitttttt......")
     print("Motor berhenti!!!!")
 }
 
 // menampilkan kecepatan saat ini
-func showSpeed(){
+func showSpeed() {
     print("Kecepatan saat ini : \(speedTotal)")
     print("Ngeeeeengggggggg")
 }
 
 // memberikan aksi ke motor listrik
-func action(){
+func action() {
     print("----------------------------------------")
     print("Ayo beraksi:")
     print("[1] Tambahkan kecepatan")
     print("[2] Kurangi kecepatan")
     print("[3] Matikan mesin")
-    if let state = getInputInt(message: "Masukkan aksi Anda"){
+    if let state = getInputInt(message: "Masukkan aksi Anda") {
         switch state {
         case 1:
             speedTotal = incrementByTen()
@@ -84,7 +84,7 @@ func action(){
                 speedTotal = decrementByTen()
                 showSpeed()
                 action()
-            }else{
+            } else {
                 turnOffEngine()
                 break
             }
@@ -94,7 +94,7 @@ func action(){
         default:
             break
         }
-    }else{
+    } else {
         print("Input tidak valid")
     }
 }

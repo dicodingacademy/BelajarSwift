@@ -8,13 +8,13 @@
 
 import Foundation
 // Function untuk mendapatkan item dari user
-func getInput(message: String) -> String?{
-    print(message, terminator: " : ");
+func getInput(message: String) -> String? {
+    print(message, terminator: " : ")
     return readLine()
 }
 
-func getInputInt(message: String) -> Int?{
-    if let inputString = getInput(message: message){
+func getInputInt(message: String) -> Int? {
+    if let inputString = getInput(message: message) {
         return Int(inputString)
     } else{
         return nil
@@ -35,7 +35,7 @@ enum SideDish: Int, CaseIterable {
 enum Drinks: Int, CaseIterable {
     case esTeh = 1, esJeruk, kopi, airPutih
 }
-func showAllHeavyMeal(){
+func showAllHeavyMeal() {
     var position = 1
     print("Makan berat")
     for heavyMeal in HeavyMeal.allCases {
@@ -44,7 +44,7 @@ func showAllHeavyMeal(){
     }
 }
 
-func showAllSideDish(){
+func showAllSideDish() {
     var position = 1
     print("Lauk")
     for sideDish in SideDish.allCases {
@@ -53,7 +53,7 @@ func showAllSideDish(){
     }
 }
 
-func showAllDrink(){
+func showAllDrink() {
     var position = 1
     print("Minuman")
     for drink in Drinks.allCases {
@@ -61,11 +61,12 @@ func showAllDrink(){
         position += 1
     }
 }
+
 var total = 0
 var item = ("","","")
 
-func inputHeavyMeal(){
-    if let position = getInputInt(message: "Pilihlah makanan"){
+func inputHeavyMeal() {
+    if let position = getInputInt(message: "Pilihlah makanan") {
         if let heavyMeal = HeavyMeal(rawValue: position) {
             switch heavyMeal {
             case .indomie:
@@ -88,15 +89,15 @@ func inputHeavyMeal(){
                 item.0 = "Nasi Kuning"
             }
         } else {
-            print("Posisi \(position) tidak ditemukan")
+            print("Posisi \(position) tidak ditemukan.")
         }
-    }else{
-        print("Input tidak valid")
+    } else {
+        print("Input tidak valid!")
     }
 }
 
-func inputSideDish(){
-    if let position = getInputInt(message: "Pilihlah lauk"){
+func inputSideDish() {
+    if let position = getInputInt(message: "Pilihlah lauk") {
         if let sideDish = SideDish(rawValue: position) {
             switch sideDish {
             case .ikan:
@@ -116,15 +117,15 @@ func inputSideDish(){
                 item.1 = "Tempe"
             }
         } else {
-            print("Posisi \(position) tidak ditemukan")
+            print("Posisi \(position) tidak ditemukan.")
         }
     }else{
-        print("Input tidak valid")
+        print("Input tidak valid!")
     }
 }
 
-func inputDrinks(){
-    if let position = getInputInt(message: "Pilihlah lauk"){
+func inputDrinks() {
+    if let position = getInputInt(message: "Pilihlah minuman") {
         if let drink = Drinks(rawValue: position) {
             switch drink {
             case .airPutih:
@@ -141,13 +142,14 @@ func inputDrinks(){
                 item.2 = "Kopi"
             }
         } else {
-            print("Posisi \(position) tidak ditemukan")
+            print("Posisi \(position) tidak ditemukan.")
         }
     }else{
-        print("Input tidak valid")
+        print("Input tidak valid!")
     }
 }
-func menu(){
+
+func menu() {
     print("Selamat datang di Rumah Makan Dicoding")
     print("--------------------------------------")
     showAllHeavyMeal()
@@ -159,7 +161,7 @@ func menu(){
     showAllDrink()
     inputDrinks()
     print("--------------------------------------")
-    print("Anda memilih \(item.0), \(item.1), dan \(item.2) dengan total harga Rp. \(total)")
+    print("Anda memilih \(item.0), \(item.1), dan \(item.2) dengan total harga Rp. \(total).")
     print("--------------------------------------")
     print("Terima kasih, selamat datang kembali!")
 }

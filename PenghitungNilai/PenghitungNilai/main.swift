@@ -16,7 +16,7 @@ print("Masukkan total nilai yang akan dinilai", terminator: ": "); let total = r
 
 print("----------------------------------")
 
-if let totalItem : Int = Int(total){
+if let totalItem : Int = Int(total) {
     var allValues = [Int]()
     for index in 1...totalItem {
         print("Masukkanlah item ke \(index)", terminator: ": "); let newItem = Int(readLine() ?? "") ?? 0
