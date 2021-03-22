@@ -88,20 +88,15 @@ func showMenu() {
         switch position {
         case 1:
             showAllFruits()
-            break
         case 2:
             insertFruit()
-            break
         case 3:
             editFruit()
-            break
         case 4:
             deleteFruit()
-            break
         case 5:
             isRunning = false
             print("Terima kasih, silakan datang kembali!")
-            break
         default:
             print("Pilihan Anda salah")
         }
