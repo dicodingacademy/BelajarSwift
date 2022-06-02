@@ -27,11 +27,3 @@ print("Apakah kalian tahu \(fullName)?")
 print("\(firstName) adalah seorang \(job).")
 print("Saat ini ia berumur \(age) dan bertempat tinggal di \(address).")
 print("----------------------------------")
-
-
-func swapTwoInts(_ a: inout Int, _ b: inout Int) {
-    let temporaryA = a; a = b; b = temporaryA
-}
-var someInt = 8, anotherInt = 9
-swapTwoInts(&someInt, &anotherInt)
-print("someInt = \(someInt), anotherInt \(anotherInt)")
