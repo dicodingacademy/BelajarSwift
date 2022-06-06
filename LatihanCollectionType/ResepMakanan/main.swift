@@ -42,7 +42,7 @@ if let totalItem: Int = Int(newItem) {
   for (index, value) in recipe.enumerated() {
     print("\(index + 1). \(value)")
   }
-  
+
 } else {
 
   // MARK: Menampilkan Error ketika input tidak valid.
